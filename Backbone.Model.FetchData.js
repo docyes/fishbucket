@@ -1,3 +1,6 @@
+/**
+ *  
+ */
 var FetchData = Backbone.Model.extend({
     initialize: function() {
         this.fetchData = this.options.FetchModel ? new this.options.FetchModel() || new Backbone.Model();
