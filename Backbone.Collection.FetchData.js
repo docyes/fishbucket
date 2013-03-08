@@ -1,7 +1,11 @@
 /**
- *  
+ * var searchResults = new FetchDataCollection();
+ * searchResults.on('reset', function() {
+ *     console.log(this.searchResults.toJSON());
+ * }, this);
+ * searchResults.fetchData.set('q', 'Trailer trash getaways');
  */
-var FetchData = Backbone.Collection.extend({
+var FetchDataCollection = Backbone.Collection.extend({
     initialize: function() {
         this.fetchData = this.options.FetchDataModel ? new this.options.FetchDataModel() || new Backbone.Model();
         this.fetchData.on('change', function() {
