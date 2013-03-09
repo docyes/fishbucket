@@ -4,6 +4,9 @@
  *     console.log(this.searchResults.toJSON());
  * }, this);
  * searchResults.fetchData.set('q', 'Trailer trash getaways');
+ * searchResults.fetch(); //sends q with a value of Trailer trash getaways
+ * searchResults.fetch({data: {q: 'House boating getaways'}}); //sends q with House boating getaways
+ * searchResults.fetch({data: {}}); //sends q with Trailer trash getaways
  */
 var FetchDataCollection = Backbone.Collection.extend({
     initialize: function() {
